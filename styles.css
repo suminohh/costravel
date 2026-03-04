@@ -6,7 +6,7 @@
       color: #111827;
       -webkit-font-smoothing: antialiased;
       line-height: 1.6;
-      text-wrap: pretty;
+
     }
     @keyframes fadeUp {
       from { opacity: 0; transform: translateY(16px); }
@@ -57,7 +57,12 @@
     }
     .faq-item.open .faq-toggle-icon { background: #16a34a; color: #fff; }
     .faq-answer { max-height: 0; overflow: hidden; transition: max-height 0.35s ease; }
-    .faq-item.open .faq-answer { max-height: 300px; }
+    .faq-item.open .faq-answer { max-height: 600px; }
+    @media (max-width: 1024px) {
+      .hero-columns { flex-direction: column !important; }
+      .hero-columns > div:first-child { width: 100% !important; max-width: 480px; margin: 0 auto; }
+      .hero-columns > div:last-child { text-align: center !important; }
+    }
     @media (max-width: 768px) {
       .nav-inner { padding: 0 20px !important; }
       .hero-section { padding: 48px 20px 40px !important; }
